@@ -23,34 +23,14 @@ public class Main {
     static Scanner scan = new Scanner(System.in);
 
 
-//Distance Function
-
-
-
-
-
-
-//Weight Function
-
-
-
-
-
-
-//Currency Function
-
-
-
-
 
 
 //Main program
     public static void main(String[] args) {
+        CurrencyConverter currencyConverter = new CurrencyConverter();
 
-
-        System.out.println("Hello world!");
-        System.out.println("test");
-        System.out.println("test2");
+        double output = currencyConverter.Convert(2,"USD","EUR");
+        System.out.println(output);
 
 
     }
