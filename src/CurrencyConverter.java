@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class CurrencyConverter {
 
     private int USD_MULT;
@@ -8,6 +11,7 @@ public class CurrencyConverter {
     private int JPY_MULT;
     private String[] availableConversions = {"USD","EUR","CAD",
             "GBP","AUD","JPY"};
+    private Map<String,Integer> conversionMap = new HashMap<>();
 
 
     /**
