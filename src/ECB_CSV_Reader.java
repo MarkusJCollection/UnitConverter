@@ -6,9 +6,9 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ECB_CSV_Reader {
-    Path CSVFile = Paths.get("data/eurofxref.csv");
-    HashMap<String,Double> conversionsMap = new HashMap<>();
-    String date;
+    private Path CSVFile = Paths.get("data/eurofxref.csv");
+    public HashMap<String,Double> conversionsMap = new HashMap<>();
+    public String date;
 
     private void fileLoader (){
         List<String> file = null;
@@ -34,6 +34,4 @@ public class ECB_CSV_Reader {
     public ECB_CSV_Reader(){
         fileLoader();
     }
-
-
 }
