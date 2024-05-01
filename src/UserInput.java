@@ -9,16 +9,16 @@ public class UserInput {
 
 
     public String askNum(){
-        System.out.println("Please enter the value you'd like to convert.\n");
+        System.out.println("\nPlease enter the value you'd like to convert.");
         return sc.nextLine();
     }
     public String askFROMConversion(){
-        System.out.println("Please enter the starting unit.\n");
+        System.out.println("\nPlease enter the starting unit.");
         return sc.nextLine();
     }
 
     public String askTOConversion(){
-        System.out.println("Please enter your desired ending unit.\n");
+        System.out.println("\nPlease enter your desired ending unit.");
         return sc.nextLine();
     }
 
@@ -27,6 +27,16 @@ public class UserInput {
         userChoice[1] = askFROMConversion();
         userChoice[2] = askTOConversion();
     }
+    public UserInput(){
+    }
+
+
+    public UserInput(String num, String c1, String c2){
+        userChoice[0] = num;
+        userChoice[1] = c1;
+        userChoice[2] = c2;
+    }
+
 
 
 }

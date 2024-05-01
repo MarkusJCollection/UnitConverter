@@ -22,7 +22,7 @@ public class ECBReader {
         String[] vals = file.get(1).split(",");
 
         for(int i=1;i<keys.length-1;i++){
-            this.conversionsMap.put(keys[i],Double.parseDouble(vals[i]));
+            this.conversionsMap.put(keys[i].substring(1),Double.parseDouble(vals[i]));
         }
         this.date = vals[0];
     }

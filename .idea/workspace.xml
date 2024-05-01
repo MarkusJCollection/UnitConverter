@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Edits to CSV reader and currency class.">
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Added basic conversion.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ECBReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECBReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714578427884</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added basic conversion.">
+      <option name="closed" value="true" />
+      <created>1714582195379</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714582195379</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,7 +220,8 @@
     <MESSAGE value="Started user input class." />
     <MESSAGE value="Made CSV reader specifically for currency exchange ran by the European Central Bank." />
     <MESSAGE value="Edits to CSV reader and currency class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Edits to CSV reader and currency class." />
+    <MESSAGE value="Added basic conversion." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic conversion." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

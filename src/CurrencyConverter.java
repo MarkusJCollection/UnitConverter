@@ -18,7 +18,7 @@ public class CurrencyConverter {
             // up-to-date exchange rates.
         ECBReader conversions = new ECBReader();
         this.conversionMap = conversions.conversionsMap;
-        this.conversionMap.put(" EUR",1.0);
+        this.conversionMap.put("EUR",1.0);
         conversionMap.forEach((key, value) ->{
             this.availableConversions.add(key);
         });
@@ -58,18 +58,19 @@ public class CurrencyConverter {
         Double newNum;
         Double firstMult;
         Double secMult;
-
         amt = amt*100;
 
-        firstMult = this.conversionMap.get(code1)*100;
-        secMult = this.conversionMap.get(code2)*100;
-
-        amt = ((amt/firstMult)*secMult)/100;
-        System.out.println(amt);
-
-
-
-
+        try{
+            firstMult = this.conversionMap.get(code1)*100;
+            secMult = this.conversionMap.get(code2)*100;
+            amt = ((amt/firstMult)*secMult)/100;
+            System.out.printf("%.2f",amt);
+        }catch(NullPointerException ex){
+            System.out.println("Invalid currency code.");
+        }catch(Exception ex){
+            System.out.println("uh oh");
+            System.out.println(ex);
+        }
     }
 
 
