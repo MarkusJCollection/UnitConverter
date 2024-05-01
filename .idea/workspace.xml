@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Made CSV reader specifically for currency exchange ran by the European Central Bank.">
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Edits to CSV reader and currency class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECB_CSV_Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECBReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714497638384</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Edits to CSV reader and currency class.">
+      <option name="closed" value="true" />
+      <created>1714578427884</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714578427884</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,7 +209,8 @@
     <MESSAGE value="Added some conversions to currency class." />
     <MESSAGE value="Started user input class." />
     <MESSAGE value="Made CSV reader specifically for currency exchange ran by the European Central Bank." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made CSV reader specifically for currency exchange ran by the European Central Bank." />
+    <MESSAGE value="Edits to CSV reader and currency class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Edits to CSV reader and currency class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -215,11 +223,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CurrencyConverter.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
