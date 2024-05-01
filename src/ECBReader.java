@@ -5,7 +5,7 @@ import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
 
-public class ECB_CSV_Reader {
+public class ECBReader {
     private Path CSVFile = Paths.get("data/eurofxref.csv");
     public HashMap<String,Double> conversionsMap = new HashMap<>();
     public String date;
@@ -25,13 +25,10 @@ public class ECB_CSV_Reader {
             this.conversionsMap.put(keys[i],Double.parseDouble(vals[i]));
         }
         this.date = vals[0];
-
-        System.out.println(this.conversionsMap);
-        System.out.println(this.date);
     }
 
 
-    public ECB_CSV_Reader(){
+    public ECBReader(){
         fileLoader();
     }
 }
