@@ -19,7 +19,9 @@ public class GenFileReader {
     public HashMap<String,Double> conversionsMapDIS = new HashMap<>();
 
 
-
+    /**
+     * File loader for the currency converter.
+     */
     private void fileLoaderCUR(){
         List<String> file = null;
         try{
@@ -37,7 +39,20 @@ public class GenFileReader {
         this.dateCUR = vals[0];
     }
 
+    public void fileLoaderDIS(){
 
+    }
+
+
+
+
+
+
+    /**
+     * Constructor function for the class;
+     * automatically runs the required file
+     * loaders.
+     */
     public GenFileReader(){
         fileLoaderCUR();
     }

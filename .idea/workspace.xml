@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="A little more work done to user input.">
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECBReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GenFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714667166908</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter.">
+      <option name="closed" value="true" />
+      <created>1714668049561</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714668049561</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,7 +272,8 @@
     <MESSAGE value="Some formatting changes." />
     <MESSAGE value="Small edits." />
     <MESSAGE value="A little more work done to user input." />
-    <option name="LAST_COMMIT_MESSAGE" value="A little more work done to user input." />
+    <MESSAGE value="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

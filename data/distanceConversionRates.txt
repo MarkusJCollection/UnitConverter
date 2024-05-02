@@ -1,0 +1,8 @@
+league,190080
+mi,63360
+fathom,72
+yd,36
+ft,12
+cm,2.54
+in,1
+!EOF
