@@ -15,7 +15,7 @@ public class GenFileReader {
 
     //Variables use for reading files related
     // to the distance converter.
-    private Path TXTFileDIS = Paths.get("data/eurofxref.csv");
+    private Path TXTFileDIS = Paths.get("data/distanceConversionRates.txt");
     public HashMap<String,Double> conversionsMapDIS = new HashMap<>();
 
 
@@ -40,7 +40,19 @@ public class GenFileReader {
     }
 
     public void fileLoaderDIS(){
-
+        String[] filler = {null,null};
+        List<String> file = null;
+        try{
+            file = Files.readAllLines(this.TXTFileDIS);
+            for(int i = 0; i<file.size();i++) {
+                if (!file.get(i).contains("!EOF")) {
+                    filler = file.get(i).split(",");
+                    this.conversionsMapDIS.put(filler[0], Double.parseDouble(filler[1]));
+                }
+            }
+        }catch(IOException ex){
+            System.out.println("Could not find file.");
+        }
     }
 
 
@@ -55,5 +67,6 @@ public class GenFileReader {
      */
     public GenFileReader(){
         fileLoaderCUR();
+        fileLoaderDIS();
     }
 }
