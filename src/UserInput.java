@@ -6,6 +6,9 @@ public class UserInput {
 
 
     String[] userChoice = {null, null, null};
+    String[] converterList = {"Currency Converter",
+            "Distance Converter", "Weight Converter"};
+
 
 
     public String askNum(){
@@ -25,19 +28,25 @@ public class UserInput {
 
 
     public int askWhich(){
-        System.out.printf("""
-                What converter would you like to use? (1,2,3)
-                1: Currency Converter
-                2: Weights Converter
-                3: Distance Converter\n""");
-        try{
-            return Integer.parseInt(sc.nextLine());
-        }catch(NumberFormatException ex){
-            System.out.println("Invalid choice.");
-            return 0;
-        }catch(Exception ex){
-            System.out.println(ex);
-            return 0;
+        int numOfOptions = 0;
+        while(true) {
+            System.out.println("Which converter would you like to use?");
+            for (int i = 0; i < this.converterList.length; i++) {
+                System.out.printf("%d: %s\n", i + 1, this.converterList[i]);
+                numOfOptions = i + 1;
+            }
+            try {
+                int optionPicked = Integer.parseInt(sc.nextLine());
+                if (optionPicked <= numOfOptions && optionPicked > 0) {
+                    return optionPicked;
+                } else {
+                    System.out.printf("Invalid choice, must be 1-%d\n", numOfOptions);
+                }
+            } catch (NumberFormatException ex) {
+                System.out.println("Invalid choice, must be a number.");
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }
         }
     }
 
