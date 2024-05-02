@@ -40,7 +40,7 @@ public class UserInput {
                 if (optionPicked <= numOfOptions && optionPicked > 0) {
                     return optionPicked;
                 } else {
-                    System.out.printf("Invalid choice, must be 1-%d\n", numOfOptions);
+                    System.out.printf("Invalid choice, must be 1-%d.\n", numOfOptions);
                 }
             } catch (NumberFormatException ex) {
                 System.out.println("Invalid choice, must be a number.");

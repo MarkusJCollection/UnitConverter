@@ -17,8 +17,8 @@ public class CurrencyConverter {
             //Reads the ECB CSV file that contains
             // up-to-date exchange rates. Euro added
             // manually.
-        ECBReader conversions = new ECBReader();
-        this.conversionMap = conversions.conversionsMap;
+        GenFileReader conversions = new GenFileReader();
+        this.conversionMap = conversions.conversionsMapCUR;
         this.conversionMap.put("EUR",1.0);
 
             //Foreach loop adding each key entry to a list.
@@ -76,22 +76,19 @@ public class CurrencyConverter {
         double secMult;
         amt = amt*100;
 
-            //Try-catch that will tell you if an input
-            // is invalid, nested in a while loop to
-            // allow the user to retry.
-        while(true) {
-            try {
-                firstMult = this.conversionMap.get(code1) * 100;
-                secMult = this.conversionMap.get(code2) * 100;
-                amt = ((amt / firstMult) * secMult) / 100;
-                System.out.printf("%.2f", amt);
-                break;
-            } catch (NullPointerException ex) {
-                System.out.println("Invalid currency code.");
-            } catch (Exception ex) {
-                System.out.println("uh oh, add this to the exception list");
-                System.out.println(ex);
-            }
+
+        //Try-catch that will tell you if an input
+        // is invalid.
+        try {
+            firstMult = this.conversionMap.get(code1.toUpperCase()) * 100;
+            secMult = this.conversionMap.get(code2.toUpperCase()) * 100;
+            amt = ((amt / firstMult) * secMult) / 100;
+            System.out.printf("%.2f", amt);
+        } catch (NullPointerException ex) {
+            System.out.println("Invalid currency code.");
+        } catch (Exception ex) {
+            System.out.println("uh oh, add this to the exception list");
+            System.out.println(ex);
         }
     }
 
