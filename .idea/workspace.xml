@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Added basic conversion.">
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Worked on user input and currency converter a bit.">
+      <change afterPath="$PROJECT_DIR$/src/DistanceConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ECBReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ECBReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
     </list>
@@ -57,18 +57,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "mj__changes",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;mj__changes&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -197,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714582195379</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Worked on user input and currency converter a bit.">
+      <option name="closed" value="true" />
+      <created>1714584298898</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714584298898</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,7 +229,8 @@
     <MESSAGE value="Made CSV reader specifically for currency exchange ran by the European Central Bank." />
     <MESSAGE value="Edits to CSV reader and currency class." />
     <MESSAGE value="Added basic conversion." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic conversion." />
+    <MESSAGE value="Worked on user input and currency converter a bit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Worked on user input and currency converter a bit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

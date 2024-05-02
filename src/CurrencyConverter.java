@@ -19,9 +19,17 @@ public class CurrencyConverter {
         ECBReader conversions = new ECBReader();
         this.conversionMap = conversions.conversionsMap;
         this.conversionMap.put("EUR",1.0);
-        conversionMap.forEach((key, value) ->{
+            //Looked up how forEach worked and suggested
+            // the use of lambda.
+
+        for(String key : this.conversionMap.keySet()){
             this.availableConversions.add(key);
-        });
+        }
+
+        //?????
+        //this.conversionMap.forEach((key, value) -> {
+        //    this.availableConversions.add(key);
+        //});
     }
 
     /**
