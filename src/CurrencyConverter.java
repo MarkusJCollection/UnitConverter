@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class CurrencyConverter {
 
-    private List<String> availableConversions = new ArrayList<>();
+    private final List<String> availableConversions = new ArrayList<>();
     private Map<String,Double> conversionMap;
 
 
@@ -72,8 +72,8 @@ public class CurrencyConverter {
     public void convert(Double amt, String code1,
                         String code2) {
             //Definition of variables used.
-        Double firstMult;
-        Double secMult;
+        double firstMult;
+        double secMult;
         amt = amt*100;
 
             //Try-catch that will tell you if an input

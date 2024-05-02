@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Worked on user input and currency converter a bit.">
-      <change afterPath="$PROJECT_DIR$/src/DistanceConverter.java" afterDir="false" />
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Some formatting changes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +203,23 @@
       <option name="project" value="LOCAL" />
       <updated>1714584298898</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="A bit more work on user input and started a distance converter.">
+      <option name="closed" value="true" />
+      <created>1714616445034</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714616445034</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Some formatting changes.">
+      <option name="closed" value="true" />
+      <created>1714617109199</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714617109199</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,7 +244,9 @@
     <MESSAGE value="Edits to CSV reader and currency class." />
     <MESSAGE value="Added basic conversion." />
     <MESSAGE value="Worked on user input and currency converter a bit." />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on user input and currency converter a bit." />
+    <MESSAGE value="A bit more work on user input and started a distance converter." />
+    <MESSAGE value="Some formatting changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some formatting changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
