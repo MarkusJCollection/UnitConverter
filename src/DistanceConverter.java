@@ -30,25 +30,25 @@ public class DistanceConverter {
      * @param code1 Currency you're converting from.
      * @param code2 Currency you're converting to.
      */
-    public void convert(Double amt, String code1,
+    public String convert(double amt, String code1,
                         String code2) {
         //Definition of variables used.
         double firstMult;
         double secMult;
-
 
         //Try-catch that will tell you if an input
         // is invalid.
         try {
             firstMult = this.conversionMap.get(code1);
             secMult = this.conversionMap.get(code2);
+
             amt = ((amt / firstMult) * secMult);
-            System.out.printf("%.2f",amt);
+            return String.format("%.2f", amt);
         } catch (NullPointerException ex) {
-            System.out.println("Invalid distance unit.");
+            return "Invalid distance unit.";
         } catch (Exception ex) {
             System.out.println("uh oh, add this to the exception list");
-            System.out.println(ex);
+            return ex.toString();
         }
     }
 

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Added txt file with distance conversions.">
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Some work done but distance class still far from working order.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/distanceConversionRates.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/distanceConversionRates.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DistanceConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DistanceConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GenFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GenFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714678335650</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Some work done but distance class still far from working order.">
+      <option name="closed" value="true" />
+      <created>1714681784923</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714681784923</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,7 +292,8 @@
     <MESSAGE value="A little more work done to user input." />
     <MESSAGE value="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter." />
     <MESSAGE value="Added txt file with distance conversions." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added txt file with distance conversions." />
+    <MESSAGE value="Some work done but distance class still far from working order." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some work done but distance class still far from working order." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

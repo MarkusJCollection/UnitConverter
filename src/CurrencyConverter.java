@@ -69,7 +69,7 @@ public class CurrencyConverter {
      * @param code1 Currency you're converting from.
      * @param code2 Currency you're converting to.
      */
-    public void convert(Double amt, String code1,
+    public String convert(double amt, String code1,
                         String code2) {
             //Definition of variables used.
         double firstMult;
@@ -83,12 +83,14 @@ public class CurrencyConverter {
             firstMult = this.conversionMap.get(code1.toUpperCase()) * 100;
             secMult = this.conversionMap.get(code2.toUpperCase()) * 100;
             amt = ((amt / firstMult) * secMult) / 100;
-            System.out.printf("%.2f", amt);
+            return String.format("%.2f", amt);
         } catch (NullPointerException ex) {
             System.out.println("Invalid currency code.");
+            return null;
         } catch (Exception ex) {
             System.out.println("uh oh, add this to the exception list");
             System.out.println(ex);
+            return null;
         }
     }
 
