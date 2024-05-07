@@ -82,15 +82,15 @@ public class CurrencyConverter {
         try {
             firstMult = this.conversionMap.get(code1.toUpperCase()) * 100;
             secMult = this.conversionMap.get(code2.toUpperCase()) * 100;
-            amt = ((amt / firstMult) * secMult) / 100;
-            return String.format("%.2f", amt);
+            double newamt = ((amt / firstMult) * secMult) / 100;
+            return String.format("%.2f %s is equal to %.2f %s.",
+                    amt,code1,newamt,code2);
         } catch (NullPointerException ex) {
-            System.out.println("Invalid currency code.");
-            return null;
+            return "Error, invalid currency code.";
+        }catch(NumberFormatException ex) {
+            return "Error, starting value must be a number.";
         } catch (Exception ex) {
-            System.out.println("uh oh, add this to the exception list");
-            System.out.println(ex);
-            return null;
+            return "Error, "+ex;
         }
     }
 

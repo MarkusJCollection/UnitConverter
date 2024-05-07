@@ -12,16 +12,16 @@ public class UserInput {
 
 
     public String askNum(){
-        System.out.println("\nPlease enter the value you'd like to convert.");
+        System.out.println("Please enter the value you'd like to convert.");
         return sc.nextLine();
     }
     public String askFROMConversion(){
-        System.out.println("\nPlease enter the starting unit.");
+        System.out.println("Please enter the starting unit.");
         return sc.nextLine();
     }
 
     public String askTOConversion(){
-        System.out.println("\nPlease enter your desired ending unit.");
+        System.out.println("Please enter your desired ending unit.");
         return sc.nextLine();
     }
 

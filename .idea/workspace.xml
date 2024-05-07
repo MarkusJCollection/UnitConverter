@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Some work done but distance class still far from working order.">
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Fixed issues with converter classes?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/distanceConversionRates.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/distanceConversionRates.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DistanceConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DistanceConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,8 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;mj__changes&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="SharedIndexes">
@@ -261,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714681784923</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Fixed issues with converter classes?">
+      <option name="closed" value="true" />
+      <created>1714757278746</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714757278746</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,7 +302,8 @@
     <MESSAGE value="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter." />
     <MESSAGE value="Added txt file with distance conversions." />
     <MESSAGE value="Some work done but distance class still far from working order." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some work done but distance class still far from working order." />
+    <MESSAGE value="Fixed issues with converter classes?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with converter classes?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

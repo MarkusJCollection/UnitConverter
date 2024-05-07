@@ -42,13 +42,15 @@ public class DistanceConverter {
             firstMult = this.conversionMap.get(code1);
             secMult = this.conversionMap.get(code2);
 
-            amt = ((amt / firstMult) * secMult);
-            return String.format("%.2f", amt);
+            double newamt = ((amt / firstMult) * secMult);
+            return String.format("%.2f %s is equal to %.2f %s.",
+                    amt,code1,newamt,code2);
         } catch (NullPointerException ex) {
-            return "Invalid distance unit.";
+            return "Error, invalid distance unit.";
+        }catch(NumberFormatException ex) {
+            return "Error, starting value must be a number.";
         } catch (Exception ex) {
-            System.out.println("uh oh, add this to the exception list");
-            return ex.toString();
+            return "Error, "+ex;
         }
     }
 
