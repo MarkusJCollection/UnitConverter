@@ -4,12 +4,16 @@ import java.util.Map;
 
 public class CurrencyConverter {
 
+    //Class-wide variables that are private with accessor functions,
+    // and deal with a list of available conversions and a key:value
+    // system for the conversions themself.
     private final List<String> availableConversions = new ArrayList<>();
     private Map<String,Double> conversionMap;
 
 
     /**
-     * Constructor function.
+     * Constructor function that initializes the available conversions
+     * and conversion map.
      */
     public CurrencyConverter() {
         //All units centered around the Euro.
@@ -21,12 +25,14 @@ public class CurrencyConverter {
         this.conversionMap = conversions.conversionsMapCUR;
         this.conversionMap.put("EUR",1.0);
 
-            //Foreach loop adding each key entry to a list.
+            //Foreach loop adding each key entry to a list
+            // so that it can be used to show a table of
+            // available conversions.
         for(String key : this.conversionMap.keySet()){
             this.availableConversions.add(key);
         }
 
-        //????? Look into later to understand what this is
+        //????? Look into later to understand what this is, completely unnecessary.
         //this.conversionMap.forEach((key, value) -> {
         //    this.availableConversions.add(key);
         //});
@@ -34,7 +40,7 @@ public class CurrencyConverter {
 
 
     /**
-     * Prints a list of available conversions in a table.
+     * Accessor function that prints a table of available conversions.
      */
     public void availableConversions(){
             //Definition of variables used.
@@ -86,22 +92,14 @@ public class CurrencyConverter {
             return String.format("%.2f %s is equal to %.2f %s.",
                     amt,code1,newamt,code2);
         } catch (NullPointerException ex) {
+                //Currency code not listen in hashmap.
             return "Error, invalid currency code.";
         }catch(NumberFormatException ex) {
+                //Inputting a letter instead of number.
             return "Error, starting value must be a number.";
         } catch (Exception ex) {
+                //Everything else, will add more specific ones as they are found.
             return "Error, "+ex;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

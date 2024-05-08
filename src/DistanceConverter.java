@@ -4,10 +4,17 @@ import java.util.List;
 
 public class DistanceConverter {
 
+    //Class-wide variables that are private with accessor functions,
+    // and deal with a list of available conversions and a key:value
+    // system for the conversions themself.
     HashMap<String,Double> conversionMap;
     List<String> availableConversions = new ArrayList<>();
 
 
+    /**
+     * Constructor function that initializes the available conversions
+     * and conversion map.
+     */
     public DistanceConverter(){
         //All units centered around the inch.
 
@@ -46,17 +53,21 @@ public class DistanceConverter {
             return String.format("%.2f %s is equal to %.2f %s.",
                     amt,code1,newamt,code2);
         } catch (NullPointerException ex) {
+                //Given unit not inside hashmap.
             return "Error, invalid distance unit.";
         }catch(NumberFormatException ex) {
+                //Gave a letter instead of number.
             return "Error, starting value must be a number.";
         } catch (Exception ex) {
+            //Everything else, will add more specific ones as they are found.
             return "Error, "+ex;
         }
     }
 
 
-
-
+    /**
+     * Accessor function that prints a table of available conversions.
+     */
     public void availableConversions(){
         //Definition of variables used.
         String output = "";
@@ -81,8 +92,4 @@ public class DistanceConverter {
         }
         System.out.println(output);
     }
-
-
-
-
 }
