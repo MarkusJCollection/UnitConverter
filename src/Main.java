@@ -26,16 +26,29 @@ public class Main {
     static UserInput input = new UserInput();
 
 
-    /*
 
+    /**
+     * Function used to ask what conversion the user would like,
+     * and allows inputs.
+     * @return Returns the output of their conversion.
      */
-    public static String ask(){
+    public static String askConvert(){
+            //Initialization of an output variable.
         String output;
+            //Switch statement based on the different cases of integers,
+            // which tie directly to number of conversion programs
+            // implemented.
         switch(input.askWhich()){
             case 1:
+                //Currency Converter
                 while(true){
+                        //Lists the table of available currency conversions.
                     currencyConverter.availableConversions();
+                        //Function to ask user what they'd like to input.
                     input.askUser();
+
+                        //Try-catch that checks mainly the starting value to see
+                        // whether it is valid.
                     try{
                         output = currencyConverter.convert(Double.parseDouble(input.userChoice[0])
                                 ,input.userChoice[1],input.userChoice[2]);
@@ -45,16 +58,29 @@ public class Main {
                         output = "Error, "+ex;
                     }
 
+                        //If the output contains the phrase error
+                        // then the error is printed and allows
+                        // the user to retry their conversion.
                     if(output.contains("Error")){
+                            //All catches for invalid inputs contain in some way 'Error'.
                         System.out.println(output+"\n");
                     }else{
+                            //If no error is found then the while loop
+                            // is exited and the output is returned.
                         return output;
                     }
                 }
           case 2:
+              //Distance Converter.
               while(true){
+                    //Lists the table of available currency conversions.
                   distanceConverter.availableConversions();
+
+                    //Function to ask user what they'd like to input.
                   input.askUser();
+
+                      //Try-catch that checks mainly the starting value to see
+                      // whether it is valid.
                   try{
                       output = distanceConverter.convert(Double.parseDouble(input.userChoice[0])
                               ,input.userChoice[1],input.userChoice[2]);
@@ -64,25 +90,49 @@ public class Main {
                       output = "Error, "+ex;
                   }
 
+                      //If the output contains the phrase error
+                      // then the error is printed and allows
+                      // the user to retry their conversion.
                   if(output.contains("Error")){
+                        //All catches for invalid inputs contain in some way 'Error'.
                       System.out.println(output+"\n");
                   }else{
+                        //If no error is found then the while loop
+                        // is exited and the output is returned.
                       return output;
                   }
               }
             case 3:
+                //Weight Converter.
                 return "Not implemented.";
             default:
+                //Other options, shouldn't be reached since the
+                // user input itself has a check to see if the value
+                // is valid.
                 System.out.println("Error.");
         }
         return null;
     }
 
 
+    /**
+     * Function called to ask if a user would like to continue.
+     * @return Returns a boolean value for use in loops, if yes then the return is true.
+     */
+    public static boolean askContinue(){
+        System.out.println("Would you like to continue? (Y/N) ");
+        String userIn = scan.nextLine();
+        return(userIn.equalsIgnoreCase("y") || userIn.toLowerCase().contains("yes"));
+    }
 
 
-//Main program
+    /**
+     * Main function of the program.
+     * @param args
+     */
     public static void main(String[] args) {
-        System.out.println(ask());
+        do{
+            System.out.println(askConvert());
+        }while(askContinue());
     }
 }

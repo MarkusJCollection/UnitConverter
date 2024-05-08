@@ -13,15 +13,15 @@ public class UserInput {
             "Distance Converter", "Weight Converter"};
 
 
+
     /**
-     * Functioin that will ask for a number.
+     * Function that will ask for a number.
      * @return Returns the scanned entry line.
      */
     public String askNum(){
         System.out.println("Please enter the value you'd like to convert.");
         return sc.nextLine();
     }
-
     /**
      * Function that will ask for a starting unit.
      * @return Returns the scanned entry line.
@@ -30,10 +30,9 @@ public class UserInput {
         System.out.println("Please enter the starting unit.");
         return sc.nextLine();
     }
-
     /**
      * Function that will ask for an ending unit.
-     * @return Returns the sacnned entry line.
+     * @return Returns the scanned entry line.
      */
     public String askTOConversion(){
         System.out.println("Please enter your desired ending unit.");
@@ -101,9 +100,9 @@ public class UserInput {
 
     /**
      * Allows for override testing, mainly for testing converters.
-     * @param num User's number choice.
-     * @param c1 User's first unit choice.
-     * @param c2 User's second unit choice.
+     * @param num Test number choice.
+     * @param c1 Test first unit choice.
+     * @param c2 Test second unit choice.
      */
     public UserInput(String num, String c1, String c2){
         this.userChoice[0] = num;

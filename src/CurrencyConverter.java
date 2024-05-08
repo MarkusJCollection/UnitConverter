@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.HashMap;
 
 public class CurrencyConverter {
 
     //Class-wide variables that are private with accessor functions,
     // and deal with a list of available conversions and a key:value
-    // system for the conversions themself.
+    // system for the conversions themselves.
     private final List<String> availableConversions = new ArrayList<>();
-    private Map<String,Double> conversionMap;
+    private final HashMap<String,Double> conversionMap;
+
 
 
     /**
@@ -25,12 +26,8 @@ public class CurrencyConverter {
         this.conversionMap = conversions.conversionsMapCUR;
         this.conversionMap.put("EUR",1.0);
 
-            //Foreach loop adding each key entry to a list
-            // so that it can be used to show a table of
-            // available conversions.
-        for(String key : this.conversionMap.keySet()){
-            this.availableConversions.add(key);
-        }
+        this.availableConversions.addAll(this.conversionMap.keySet());
+
 
         //????? Look into later to understand what this is, completely unnecessary.
         //this.conversionMap.forEach((key, value) -> {
@@ -48,7 +45,7 @@ public class CurrencyConverter {
         int counter = 1;
 
             //Row count defined as a variable for easily
-            // deciding how many rows should be displaed.
+            // deciding how many rows should be displayed.
         int rowCount = 8;
 
             //Foreach loop going through every entry of
@@ -90,7 +87,7 @@ public class CurrencyConverter {
             secMult = this.conversionMap.get(code2.toUpperCase()) * 100;
             double newamt = ((amt / firstMult) * secMult) / 100;
             return String.format("%.2f %s is equal to %.2f %s.",
-                    amt,code1,newamt,code2);
+                    amt/100,code1.toUpperCase(),newamt,code2.toUpperCase());
         } catch (NullPointerException ex) {
                 //Currency code not listen in hashmap.
             return "Error, invalid currency code.";

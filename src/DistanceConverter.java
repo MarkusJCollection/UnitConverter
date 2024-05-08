@@ -6,9 +6,10 @@ public class DistanceConverter {
 
     //Class-wide variables that are private with accessor functions,
     // and deal with a list of available conversions and a key:value
-    // system for the conversions themself.
-    HashMap<String,Double> conversionMap;
-    List<String> availableConversions = new ArrayList<>();
+    // system for the conversions themselves.
+    public final HashMap<String,Double> conversionMap;
+    public final List<String> availableConversions = new ArrayList<>();
+
 
 
     /**
@@ -22,10 +23,8 @@ public class DistanceConverter {
         GenFileReader conversions = new GenFileReader();
         this.conversionMap = conversions.conversionsMapDIS;
 
-        //Foreach loop adding each key entry to a list.
-        for(String key : this.conversionMap.keySet()){
-            this.availableConversions.add(key);
-        }
+
+        this.availableConversions.addAll(this.conversionMap.keySet());
 
     }
 
@@ -46,12 +45,12 @@ public class DistanceConverter {
         //Try-catch that will tell you if an input
         // is invalid.
         try {
-            firstMult = this.conversionMap.get(code1);
-            secMult = this.conversionMap.get(code2);
+            firstMult = this.conversionMap.get(code1.toLowerCase());
+            secMult = this.conversionMap.get(code2.toLowerCase());
 
             double newamt = ((amt / firstMult) * secMult);
             return String.format("%.2f %s is equal to %.2f %s.",
-                    amt,code1,newamt,code2);
+                    amt,code1.toLowerCase(),newamt,code2.toLowerCase());
         } catch (NullPointerException ex) {
                 //Given unit not inside hashmap.
             return "Error, invalid distance unit.";
@@ -74,8 +73,8 @@ public class DistanceConverter {
         int counter = 1;
 
         //Row count defined as a variable for easily
-        // deciding how many rows should be displaed.
-        int rowCount = 4;
+        // deciding how many rows should be displayed.
+        int rowCount = 3;
 
         //Foreach loop going through every entry of
         // available conversions.
