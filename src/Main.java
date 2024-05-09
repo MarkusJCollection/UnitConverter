@@ -27,7 +27,7 @@ public class Main {
     static CurrencyConverter currencyConverter = new CurrencyConverter();
     static DistanceConverter distanceConverter = new DistanceConverter();
     static WeightConverter weightConverter = new WeightConverter();
-        //Input functions from the user, including the display.
+        //Input functions from the user.
     static UserInput input = new UserInput();
 
 
