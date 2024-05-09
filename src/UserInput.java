@@ -93,6 +93,7 @@ public class UserInput {
 
     /**
      * Unnecessary constructor function that may have future use.
+     * Currently added for the use of an override.
      */
     public UserInput(){
     }

@@ -3,7 +3,7 @@ public class Main {
 /*
     There are 3 types of conversion the company needs to plan:
     1. Distances - km,mi,etc.        CENTERED AROUND METER
-    2. Weights - kg,lb,etc.          CENTERED AROUND ????
+    2. Weights - kg,lb,etc.          CENTERED AROUND KILOGRAM
     3. Currency - USD,EUR,etc.       CENTERED AROUND EURO
 
     We need an app which asks what conversion needs
@@ -20,10 +20,14 @@ public class Main {
  */
 
 //Global functions.
+
+        //Scanner function.
     static Scanner scan = new Scanner(System.in);
+        //Different converters.
     static CurrencyConverter currencyConverter = new CurrencyConverter();
     static DistanceConverter distanceConverter = new DistanceConverter();
     static WeightConverter weightConverter = new WeightConverter();
+        //Input functions from the user, including the display.
     static UserInput input = new UserInput();
     static DisplayFunction displayFunc = new DisplayFunction();
 
