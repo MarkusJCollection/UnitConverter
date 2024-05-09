@@ -1,66 +1,106 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class CurrencyConverter {
 
-    private int USD_MULT;
-    private int EUR_MULT;
-    private int GBP_MULT;
-    private int AUD_MULT;
-    private int CAD_MULT;
-    private int JPY_MULT;
-    private String[] availableConversions = {"USD","EUR","CAD",
-            "GBP","AUD","JPY"};
+    private final List<String> availableConversions = new ArrayList<>();
+    private Map<String,Double> conversionMap;
 
 
     /**
      * Constructor function.
      */
     public CurrencyConverter() {
-        //All units centered around the U.S. dollar.
+        //All units centered around the Euro.
 
-        USD_MULT = 100;
-        EUR_MULT = 92;
-        GBP_MULT = 79;
-        AUD_MULT = 152;
-        CAD_MULT = 135;
-        JPY_MULT = 15165;
+            //Reads the ECB CSV file that contains
+            // up-to-date exchange rates. Euro added
+            // manually.
+        GenFileReader conversions = new GenFileReader();
+        this.conversionMap = conversions.conversionsMapCUR;
+        this.conversionMap.put("EUR",1.0);
 
+            //Foreach loop adding each key entry to a list.
+        for(String key : this.conversionMap.keySet()){
+            this.availableConversions.add(key);
+        }
+
+        //????? Look into later to understand what this is
+        //this.conversionMap.forEach((key, value) -> {
+        //    this.availableConversions.add(key);
+        //});
     }
+
 
     /**
-     * Accessor method for available currency conversions.
-     * @return Returns the available units of conversion.
+     * Prints a list of available conversions in a table.
      */
-    public String availableConversions(){
-        return this.availableConversions();
-    }
-    private int multiplierFinder(String unitInput){
-        switch(unitInput.toUpperCase()){
-            case "EUR":
-                return EUR_MULT;
-            case "GBP":
-                return GBP_MULT;
-            case "AUD":
-                return AUD_MULT;
-            case "CAD":
-                return CAD_MULT;
-            case "JPY":
-                return JPY_MULT;
-            default:
-                return USD_MULT;
+    public void availableConversions(){
+            //Definition of variables used.
+        String output = "";
+        int counter = 1;
 
+            //Row count defined as a variable for easily
+            // deciding how many rows should be displaed.
+        int rowCount = 8;
+
+            //Foreach loop going through every entry of
+            // available conversions.
+        for(String entry : this.availableConversions){
+                //Each run the entry is added to the output.
+            output+= entry+"\t\t";
+                //Counter to keep track of how many items
+                // have been added to a row.
+            if(counter == rowCount){
+                output += "\n";
+                counter = 0;
+            }
+            counter++;
+        }
+        System.out.println(output);
+    }
+
+
+    /**
+     * Function that will convert a given dollar amount
+     * from one currency to another.
+     * @param amt Dollar amount input
+     * @param code1 Currency you're converting from.
+     * @param code2 Currency you're converting to.
+     */
+    public String convert(double amt, String code1,
+                        String code2) {
+            //Definition of variables used.
+        double firstMult;
+        double secMult;
+        amt = amt*100;
+
+
+        //Try-catch that will tell you if an input
+        // is invalid.
+        try {
+            firstMult = this.conversionMap.get(code1.toUpperCase()) * 100;
+            secMult = this.conversionMap.get(code2.toUpperCase()) * 100;
+            double newamt = ((amt / firstMult) * secMult) / 100;
+            return String.format("%.2f %s is equal to %.2f %s.",
+                    amt,code1,newamt,code2);
+        } catch (NullPointerException ex) {
+            return "Error, invalid currency code.";
+        }catch(NumberFormatException ex) {
+            return "Error, starting value must be a number.";
+        } catch (Exception ex) {
+            return "Error, "+ex;
         }
     }
 
 
-    public double Convert(double numInput, String firstUnit,
-                             String secondUnit){
-        return ((numInput*100)/multiplierFinder(firstUnit)
-                *multiplierFinder(secondUnit))/100;
-    }
 
-    public double USDto(double numInput, String unit){
-        return ((numInput*100)*
-                ((USD_MULT)/multiplierFinder(unit)))/100;
-    }
+
+
+
+
+
 
 
 

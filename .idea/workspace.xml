@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Added some conversions to currency class.">
-      <change afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
+    <list default="true" id="596ae5fe-014b-4814-9bb7-0a9336a00de0" name="Changes" comment="Fixed issues with converter classes?">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CurrencyConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DistanceConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DistanceConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -57,8 +64,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+    &quot;git-widget-placeholder&quot;: &quot;mj__changes&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
   <component name="SharedIndexes">
@@ -141,7 +150,127 @@
       <option name="project" value="LOCAL" />
       <updated>1712165960480</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Started user input class.">
+      <option name="closed" value="true" />
+      <created>1713890418300</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713890418300</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Started user input class.">
+      <option name="closed" value="true" />
+      <created>1714495493498</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1714495493498</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Started user input class.">
+      <option name="closed" value="true" />
+      <created>1714497530132</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1714497530132</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Made CSV reader specifically for currency exchange ran by the European Central Bank.">
+      <option name="closed" value="true" />
+      <created>1714497638384</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1714497638384</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Edits to CSV reader and currency class.">
+      <option name="closed" value="true" />
+      <created>1714578427884</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1714578427884</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added basic conversion.">
+      <option name="closed" value="true" />
+      <created>1714582195379</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714582195379</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Worked on user input and currency converter a bit.">
+      <option name="closed" value="true" />
+      <created>1714584298898</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714584298898</updated>
+    </task>
+    <task id="LOCAL-00016" summary="A bit more work on user input and started a distance converter.">
+      <option name="closed" value="true" />
+      <created>1714616445034</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714616445034</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Some formatting changes.">
+      <option name="closed" value="true" />
+      <created>1714617109199</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714617109199</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Small edits.">
+      <option name="closed" value="true" />
+      <created>1714618616258</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1714618616258</updated>
+    </task>
+    <task id="LOCAL-00019" summary="A little more work done to user input.">
+      <option name="closed" value="true" />
+      <created>1714667166908</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1714667166908</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter.">
+      <option name="closed" value="true" />
+      <created>1714668049561</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1714668049561</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added txt file with distance conversions.">
+      <option name="closed" value="true" />
+      <created>1714678335650</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1714678335650</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Some work done but distance class still far from working order.">
+      <option name="closed" value="true" />
+      <created>1714681784923</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1714681784923</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Fixed issues with converter classes?">
+      <option name="closed" value="true" />
+      <created>1714757278746</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1714757278746</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,6 +290,33 @@
     <MESSAGE value="Added distance class." />
     <MESSAGE value="Started work on currency conversion class." />
     <MESSAGE value="Added some conversions to currency class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some conversions to currency class." />
+    <MESSAGE value="Started user input class." />
+    <MESSAGE value="Made CSV reader specifically for currency exchange ran by the European Central Bank." />
+    <MESSAGE value="Edits to CSV reader and currency class." />
+    <MESSAGE value="Added basic conversion." />
+    <MESSAGE value="Worked on user input and currency converter a bit." />
+    <MESSAGE value="A bit more work on user input and started a distance converter." />
+    <MESSAGE value="Some formatting changes." />
+    <MESSAGE value="Small edits." />
+    <MESSAGE value="A little more work done to user input." />
+    <MESSAGE value="Some file renaming to make the file reading class more general for use in also reading a file used for the distance converter." />
+    <MESSAGE value="Added txt file with distance conversions." />
+    <MESSAGE value="Some work done but distance class still far from working order." />
+    <MESSAGE value="Fixed issues with converter classes?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with converter classes?" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NumberFormatException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
