@@ -9,7 +9,7 @@ public class GenFileReader {
     //Variables used for reading files related
     // to the currency converter.
     private Path CSVFileCUR = Paths.get("data/eurofxref.csv");
-    public HashMap<String,Double> conversionsMapCUR = new HashMap<>();
+    public final HashMap<String,Double> conversionsMapCUR = new HashMap<>();
     public String dateCUR;
 
 
@@ -17,6 +17,7 @@ public class GenFileReader {
     // to the distance converter.
     private Path TXTFileDIS = Paths.get("data/distanceConversionRates.txt");
     public HashMap<String,Double> conversionsMapDIS = new HashMap<>();
+
 
 
     /**
@@ -34,11 +35,15 @@ public class GenFileReader {
         String[] vals = file.get(1).split(",");
 
         for(int i=1;i<keys.length-1;i++){
-            this.conversionsMapCUR.put(keys[i].substring(1),Double.parseDouble(vals[i]));
+            this.conversionsMapCUR.put(keys[i].stripLeading(),Double.parseDouble(vals[i]));
         }
         this.dateCUR = vals[0];
     }
 
+
+    /**
+     * File loader for the distance conversions.
+     */
     public void fileLoaderDIS(){
         String[] filler = {null,null};
         List<String> file = null;
@@ -48,16 +53,14 @@ public class GenFileReader {
                 if (!file.get(i).contains("!EOF")) {
                     filler = file.get(i).split(",");
                     this.conversionsMapDIS.put(filler[0], Double.parseDouble(filler[1]));
+                }else{
+                    break;
                 }
             }
         }catch(IOException ex){
             System.out.println("Could not find file.");
         }
     }
-
-
-
-
 
 
     /**

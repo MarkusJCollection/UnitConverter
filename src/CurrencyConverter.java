@@ -1,15 +1,20 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
+import java.util.HashMap;
 
 public class CurrencyConverter {
 
+    //Class-wide variables that are private with accessor functions,
+    // and deal with a list of available conversions and a key:value
+    // system for the conversions themselves.
     private final List<String> availableConversions = new ArrayList<>();
-    private Map<String,Double> conversionMap;
+    private final HashMap<String,Double> conversionMap;
+
 
 
     /**
-     * Constructor function.
+     * Constructor function that initializes the available conversions
+     * and conversion map.
      */
     public CurrencyConverter() {
         //All units centered around the Euro.
@@ -21,12 +26,10 @@ public class CurrencyConverter {
         this.conversionMap = conversions.conversionsMapCUR;
         this.conversionMap.put("EUR",1.0);
 
-            //Foreach loop adding each key entry to a list.
-        for(String key : this.conversionMap.keySet()){
-            this.availableConversions.add(key);
-        }
+        this.availableConversions.addAll(this.conversionMap.keySet());
 
-        //????? Look into later to understand what this is
+
+        //????? Look into later to understand what this is, completely unnecessary.
         //this.conversionMap.forEach((key, value) -> {
         //    this.availableConversions.add(key);
         //});
@@ -34,7 +37,7 @@ public class CurrencyConverter {
 
 
     /**
-     * Prints a list of available conversions in a table.
+     * Accessor function that prints a table of available conversions.
      */
     public void availableConversions(){
             //Definition of variables used.
@@ -42,7 +45,7 @@ public class CurrencyConverter {
         int counter = 1;
 
             //Row count defined as a variable for easily
-            // deciding how many rows should be displaed.
+            // deciding how many rows should be displayed.
         int rowCount = 8;
 
             //Foreach loop going through every entry of
@@ -84,24 +87,16 @@ public class CurrencyConverter {
             secMult = this.conversionMap.get(code2.toUpperCase()) * 100;
             double newamt = ((amt / firstMult) * secMult) / 100;
             return String.format("%.2f %s is equal to %.2f %s.",
-                    amt,code1,newamt,code2);
+                    amt/100,code1.toUpperCase(),newamt,code2.toUpperCase());
         } catch (NullPointerException ex) {
+                //Currency code not listen in hashmap.
             return "Error, invalid currency code.";
         }catch(NumberFormatException ex) {
+                //Inputting a letter instead of number.
             return "Error, starting value must be a number.";
         } catch (Exception ex) {
+                //Everything else, will add more specific ones as they are found.
             return "Error, "+ex;
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }

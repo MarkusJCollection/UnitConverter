@@ -1,9 +1,11 @@
-Km,1000
+km,0.001
 m,1.0
-cm,0.01
-mm,0.001
+cm,100
+mm,1000
 ft,3.28
 in,39.37
 yd,1.09
 mi,0.00062
 !EOF
+All conversions must have a key that is lower case.
+Follows the convention of (rate,conversion rate)
