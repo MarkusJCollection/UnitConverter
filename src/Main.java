@@ -29,7 +29,6 @@ public class Main {
     static WeightConverter weightConverter = new WeightConverter();
         //Input functions from the user, including the display.
     static UserInput input = new UserInput();
-    static DisplayFunction displayFunc = new DisplayFunction();
 
 
     /**
@@ -43,9 +42,9 @@ public class Main {
             //Switch statement based on the different cases of integers,
             // which tie directly to number of conversion programs
             // implemented.
-        displayFunc.displayAvailableFunctions();
-        int choice = displayFunc.askUserChoice();
-        displayFunc.displayFunction(choice);
+        DisplayFunction.displayAvailableFunctions();
+        int choice = DisplayFunction.askUserChoice();
+        DisplayFunction.displayFunction(choice);
         switch(choice){
             case 1:
                 //Currency Converter
