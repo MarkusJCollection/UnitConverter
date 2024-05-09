@@ -23,8 +23,9 @@ public class Main {
     static Scanner scan = new Scanner(System.in);
     static CurrencyConverter currencyConverter = new CurrencyConverter();
     static DistanceConverter distanceConverter = new DistanceConverter();
+    static WeightConverter weightConverter = new WeightConverter();
     static UserInput input = new UserInput();
-
+    static DisplayFunction displayFunc = new DisplayFunction();
 
 
     /**
@@ -38,7 +39,10 @@ public class Main {
             //Switch statement based on the different cases of integers,
             // which tie directly to number of conversion programs
             // implemented.
-        switch(input.askWhich()){
+        displayFunc.displayAvailableFunctions();
+        int choice = displayFunc.askUserChoice();
+        displayFunc.displayFunction(choice);
+        switch(choice){
             case 1:
                 //Currency Converter
                 while(true){
@@ -70,7 +74,7 @@ public class Main {
                         return output;
                     }
                 }
-          case 2:
+          case 3:
               //Distance Converter.
               while(true){
                     //Lists the table of available currency conversions.
@@ -102,9 +106,37 @@ public class Main {
                       return output;
                   }
               }
-            case 3:
+            case 2:
                 //Weight Converter.
-                return "Not implemented.";
+                while(true){
+                        //Lists the table of available currency conversions.
+                    System.out.println("""
+                            kg      pounds""");
+                        //Function to ask user what they'd like to input.
+                    input.askUser();
+                        //Try-catch that checks mainly the starting value to see
+                        // whether it is valid.
+                    try{
+                        output = String.format("%.2f",weightConverter.convert(Double.parseDouble(input.userChoice[0])
+                                ,input.userChoice[1],input.userChoice[2]));
+                    }catch(NumberFormatException ex){
+                        output = "Error, starting value must be a number.";
+                    }catch(Exception ex){
+                        output = "Error, "+ex;
+                    }
+
+                    //If the output contains the phrase error
+                    // then the error is printed and allows
+                    // the user to retry their conversion.
+                    if(output.contains("Error")){
+                        //All catches for invalid inputs contain in some way 'Error'.
+                        System.out.println(output+"\n");
+                    }else{
+                        //If no error is found then the while loop
+                        // is exited and the output is returned.
+                        return output;
+                    }
+                }
             default:
                 //Other options, shouldn't be reached since the
                 // user input itself has a check to see if the value
