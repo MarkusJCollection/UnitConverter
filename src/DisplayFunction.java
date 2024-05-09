@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class DisplayFunction {
     // Global scanner object
-    private static Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     // Method to display available functions
-    public static void displayAvailableFunctions() {
+    public void displayAvailableFunctions() {
         System.out.println("Available functions:");
         System.out.println("1. Currency Converter");
         System.out.println("2. Weight Converter");
@@ -14,13 +14,13 @@ public class DisplayFunction {
     }
 
     // Method to ask user for their choice
-    public static int askUserChoice() {
+    public int askUserChoice() {
         System.out.print("Enter your choice: ");
         return scanner.nextInt();
     }
 
     // Method to display selected function based on user choice
-    public static void displayFunction(int choice) {
+    public void displayFunction(int choice) {
         switch (choice) {
             case 1:
                 CurrencyConverter currencyConverter = new CurrencyConverter();
@@ -48,10 +48,12 @@ public class DisplayFunction {
 
     // Main method for testing
     public static void main(String[] args) {
+        DisplayFunction displayFunction = new DisplayFunction();
         while (true) {
-            displayAvailableFunctions();
-            int choice = askUserChoice();
-            displayFunction(choice);
+            displayFunction.displayAvailableFunctions();
+            int choice = displayFunction.askUserChoice();
+            displayFunction.displayFunction(choice);
         }
     }
 }
+
