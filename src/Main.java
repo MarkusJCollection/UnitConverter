@@ -117,8 +117,9 @@ public class Main {
                         //Try-catch that checks mainly the starting value to see
                         // whether it is valid.
                     try{
-                        output = String.format("%.2f",weightConverter.convert(Double.parseDouble(input.userChoice[0])
-                                ,input.userChoice[1],input.userChoice[2]));
+                        output = String.format("%s %s is equal to %.2f %s",input.userChoice[0],
+                                input.userChoice[1],weightConverter.convert(Double.parseDouble(input.userChoice[0])
+                                ,input.userChoice[1],input.userChoice[2]),input.userChoice[2]);
                     }catch(NumberFormatException ex){
                         output = "Error, starting value must be a number.";
                     }catch(Exception ex){
