@@ -20,7 +20,7 @@ public class DistanceConverter {
         //All units centered around the inch.
 
         //Reads the TXT file that contains conversions.
-        GenFileReader conversions = new GenFileReader();
+        GenFileReader conversions = new GenFileReader(false);
         this.conversionMap = conversions.conversionsMapDIS;
 
 

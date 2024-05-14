@@ -9,6 +9,7 @@ public class CurrencyConverter {
     // system for the conversions themselves.
     private final List<String> availableConversions = new ArrayList<>();
     private final HashMap<String,Double> conversionMap;
+    private String date;
 
 
 
@@ -22,11 +23,12 @@ public class CurrencyConverter {
             //Reads the ECB CSV file that contains
             // up-to-date exchange rates. Euro added
             // manually.
-        GenFileReader conversions = new GenFileReader();
+        GenFileReader conversions = new GenFileReader(true);
         this.conversionMap = conversions.conversionsMapCUR;
         this.conversionMap.put("EUR",1.0);
 
         this.availableConversions.addAll(this.conversionMap.keySet());
+        this.date = conversions.dateCUR;
 
 
         //????? Look into later to understand what this is, completely unnecessary.
@@ -61,7 +63,7 @@ public class CurrencyConverter {
             }
             counter++;
         }
-        System.out.println(output);
+        System.out.printf("Last updated %s.\n%s\n",this.date,output);
     }
 
 

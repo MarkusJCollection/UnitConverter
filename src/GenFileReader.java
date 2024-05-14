@@ -72,4 +72,11 @@ public class GenFileReader {
         fileLoaderCUR();
         fileLoaderDIS();
     }
+    public GenFileReader(boolean choice){
+        if(choice){
+            fileLoaderCUR();
+        }else{
+            fileLoaderDIS();
+        }
+    }
 }
