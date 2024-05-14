@@ -72,6 +72,13 @@ public class GenFileReader {
         fileLoaderCUR();
         fileLoaderDIS();
     }
+
+
+    /**
+     * Constructor function that will let you choose between using the
+     * file loader for the currencies or distances.
+     * @param choice True is for currency, false is for distance.
+     */
     public GenFileReader(boolean choice){
         if(choice){
             fileLoaderCUR();
