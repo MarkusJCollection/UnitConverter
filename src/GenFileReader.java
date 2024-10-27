@@ -1,9 +1,12 @@
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Scanner;
 
 public class GenFileReader {
     //Variables used for reading files related
@@ -24,20 +27,30 @@ public class GenFileReader {
      * File loader for the currency converter.
      */
     private void fileLoaderCUR(){
-        List<String> file = null;
         try{
-            file = Files.readAllLines(this.CSVFileCUR);
-        }catch(IOException ex){
-            System.out.println("Could not read file.");
-        }
+            URI url = new URI("https://data-api.ecb.europa.eu/service/data/EXR/D..EUR.SP00.A?lastNObservations=1&detail=dataonly&format=csvdata");
+            HttpURLConnection conn = (HttpURLConnection) url.toURL().openConnection();
+            conn.setRequestMethod("GET");
+            conn.connect();
 
-        String[] keys = file.get(0).split(",");
-        String[] vals = file.get(1).split(",");
+            int responseCode = conn.getResponseCode();
 
-        for(int i=1;i<keys.length-1;i++){
-            this.conversionsMapCUR.put(keys[i].stripLeading(),Double.parseDouble(vals[i]));
+            if (responseCode != 200){
+                throw new RuntimeException("HTTPResponseCode: "+responseCode);
+            } else {
+                Scanner scanner = new Scanner(url.toURL().openStream());
+                scanner.nextLine();
+                while (scanner.hasNextLine()){
+                    String[] fileLine = scanner.nextLine().split(",");
+                    conversionsMapCUR.put(fileLine[2],Double.parseDouble(fileLine[7]));
+                    this.dateCUR = fileLine[6];
+                }
+                scanner.close();
+                System.out.print(conversionsMapCUR);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
         }
-        this.dateCUR = vals[0];
     }
 
 
@@ -65,7 +78,7 @@ public class GenFileReader {
 
     /**
      * Constructor function for the class;
-     * automatically runs the required file
+     * automatically runs both required file
      * loaders.
      */
     public GenFileReader(){

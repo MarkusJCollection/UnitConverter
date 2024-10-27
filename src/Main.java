@@ -29,7 +29,7 @@ public class Main {
     static WeightConverter weightConverter = new WeightConverter();
         //Input functions from the user.
     static UserInput input = new UserInput();
-
+    //DisplayFunction also takes input.
 
     /**
      * Function used to ask what conversion the user would like,
